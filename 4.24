@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <math.h>  
+int main()
+{
+	int nums[] = {100, 2, -10, 4, -7, 1, 10, 5};
+	int pre = 0, maxAns = nums[0];
+    int i; 
+    int numsSize = 8;
+    for (i = 0; i < numsSize; i++)
+    {
+		pre = fmax(pre + nums[i], nums[i]);
+	}
+		maxAns = fmax(maxAns, pre);
+	printf("%d", maxAns);
+	return 0;
+ } 
+
